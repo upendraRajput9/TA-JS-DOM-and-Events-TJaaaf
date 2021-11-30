@@ -12,7 +12,7 @@ buttonText = event.target.innerText
     screenValue = "";
     screen.innerText = screenValue
  }
- else if(buttonText==`%`){
+ else if(buttonText==`/`){
     screenValue += buttonText
      screen.innerText = screenValue
  }
@@ -30,8 +30,8 @@ buttonText = event.target.innerText
      screen.innerText = screenValue
  }
  else if(buttonText==`=`){
-    screen.innerText= eval(screenValue)
-     
+    screenValue= eval(screenValue)
+    screen.innerText = screenValue
  }
  else{
      screenValue += buttonText;
