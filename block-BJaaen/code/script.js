@@ -15,15 +15,15 @@ key.addEventListener(`click`,function(event){
     type2.innerText= choice[i];
     type1.innerText= event.target.id
     if(type1.innerText==type2.innerText){
-        p.innerText= `It's tie 🤯`
+        p.innerText= `It's tie !🤯`
        }
        else if(type1.innerText=="rock"&&type2.innerText=="paper" ||type1.innerText=="paper"&&type2.innerText=="scissor"||type1.innerText=="scissor"&&type2.innerText=="rock"){
-        p.innerText= `You lose 😩`
+        p.innerText= `You lose !😩`
         count1=count1+1
         comPoint.innerText=count1
        }
       else if(type1.innerText=="paper"&&type2.innerText=="rock" ||type1.innerText=="scissor"&&type2.innerText=="paper"||type1.innerText=="rock"&&type2.innerText=="scissor"){
-        p.innerText= `You win 😎`
+        p.innerText= `You won ! 😎`
         count2=count2+1
         yourPoint.innerText=count2
        }
