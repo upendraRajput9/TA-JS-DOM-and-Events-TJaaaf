@@ -1,0 +1,114 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.container{
+    max-width: 1200px;
+    
+    margin: 0,auto;
+    padding: 0,32px;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+i{
+    font-size: 6rem;
+    color: rgb(92, 92, 235);
+}
+.key2{
+    color: tomato;
+}
+h2{
+    font-size: 2rem;
+}
+h1{
+    font-size: 2.5rem;
+padding: 1rem;
+color: rgb(255, 255, 255);
+font-family: monospace;
+font-weight: lighter;
+}
+header{
+    background-color: rgb(44, 87, 168);
+    text-align: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.rps{
+    width: 55%;
+    box-shadow: 3px 3px 5px 2px rgb(144, 144, 144);
+border-radius: 1rem;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+background-color: whitesmoke;
+/* margin-top: 3rem; */
+}
+.game{
+    padding: 3rem;
+}
+.icon{
+    display: flex;
+    justify-content: space-around;
+}
+.refresh{
+    padding: 2rem;
+    margin-left: 1rem;
+    color: rgb(58, 58, 58);
+    font-size: 3.5rem;
+}
+p{
+    text-align: center;
+    font-size: 3rem;
+    color: brown;
+    margin-bottom: 1rem;
+}
