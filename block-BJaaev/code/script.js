@@ -2,7 +2,8 @@ let inputText = document.querySelector(`form`);
 let root = document.querySelector(`ul`)
 
 
-let allTodos = []
+let allTodos =  localStorage.getItem(`allTodos`)?JSON.parse(localStorage.getItem(`allTodos`)):[];
+
 
 function handlerInput(event) {
     event.preventDefault();
@@ -22,16 +23,17 @@ function handlerInput(event) {
 function handledelete(event) {
     let id = event.target.dataset.id;
     allTodos.splice(id, 1)
-
     createUI(allTodos);
+    localStorage.setItem("allTodos",JSON.stringify(allTodos))
 }
 
 
 function handleToggle(event){
     event.preventDefault(allTodos)
     let id = event.target.dataset.id;
-    allTodos[id].isDone =!allTodos[id].isDone
+    allTodos[id].isDone =!allTodos[id].isDone;
     createUI(allTodos)
+    localStorage.setItem("allTodos",JSON.stringify(allTodos))
 }
 function createUI(allTodos=allTodos) {
     root.innerHTML = ""
@@ -103,10 +105,9 @@ return elm.isDone
 
 clear.addEventListener(`click`,function(event){
     event.preventDefault()
-    allTodos.forEach((elm,i,arr)=>{
-        if(elm.isDone){
-            arr.splice(i,1)
-        }
-    })
-    createUI(allTodos)
+    allTodos = allTodos.filter((elm)=>!elm.isDone)
+        createUI(allTodos)
+   
+    
+    localStorage.setItem("allTodos",JSON.stringify(allTodos))
 })
